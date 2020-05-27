@@ -6,8 +6,8 @@
 
   <div class="flats d-flex justify-content-around flex-wrap">
     <% @flats.each do |flat| %>
-      <div class="flat my-3" style="background-color: #F8F9FA; box-shadow: 2px 2px 3px rgba(0,0,0,0.3);">
-        <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=350">
+      <div class="flat my-3" style="background-color: #F8F9FA; box-shadow: 2px 2px 3px rgba(0,0,0,0.3); width: 350px;">
+        <img src="<%= flat.image %>" style="height: 200px; width: 350px;">
         <div class="description p-3">
           <h3><%= flat.name %></h3>
           <p><%= flat.address %></p>
