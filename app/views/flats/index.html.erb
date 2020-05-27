@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>All our flats</h1>
+  <p>
+    All <%= @flats.count %> flats.
+  </p>
+
+  <div class="flats d-flex justify-content-around flex-wrap">
+    <% @flats.each do |flat| %>
+      <div class="flat my-3" style="background-color: #F8F9FA; box-shadow: 2px 2px 3px rgba(0,0,0,0.3);">
+        <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=350">
+        <div class="description p-3">
+          <h3><%= flat.name %></h3>
+          <p><%= flat.address %></p>
+          <div class="info d-flex">
+            <div class="inner-info mr-3">
+              <i class="fas fa-user-friends"></i> <%= flat.number_of_guests %>
+            </div>
+            <div class="inner-info">
+              <i class="fas fa-euro-sign"></i> <%= flat.price_per_night %>
+            </div>
+          </div>
+        </div>
+        <div class="links p-3" style="background-color: white;">
+          <%= link_to "More info", flat_path(flat) %> |
+          <%= link_to "Edit" %> |
+          <%= link_to "Remove" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

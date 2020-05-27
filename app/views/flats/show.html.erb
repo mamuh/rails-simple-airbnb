@@ -1,0 +1,49 @@
+<div class="banner" style="background-image: url(https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=950); height: 40vh; background-size: cover;">
+</div>
+
+<div class="container">
+
+  <div class="main bg-light my-3 p-3" style="box-shadow: 2px 2px 3px rgba(0,0,0,0.2)">
+    <h1><%= @flat.name %></h1>
+    <%= @flat.address %>
+  </div>
+
+  <div class="more-info bg-light p-3" style="box-shadow: 2px 2px 3px rgba(0,0,0,0.2)">
+    <h3>A bit more about this flat...</h3>
+    <%= @flat.description %>
+  </div>
+
+
+  <div class="book bg-light mt-2 p-3" style="box-shadow: 2px 2px 3px rgba(0,0,0,0.2)">
+    <p>Book this place!</p>
+      <form class="form-group">
+        <label for="example-date-input" class="col-2 col-form-label">From:</label>
+        <div class="col-10">
+          <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+        </div>
+        <label for="example-date-input" class="col-2 col-form-label">To:</label>
+        <div class="col-10">
+          <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+  </div>
+
+  <div class="details bg-light mt-2 p-3" style="box-shadow: 2px 2px 3px rgba(0,0,0,0.2)">
+    <p>Details</p>
+      <div class="info d-flex">
+        <div class="inner-info mr-3">
+          <i class="fas fa-user-friends"></i> <%= @flat.number_of_guests %>
+        </div>
+        <div class="inner-info">
+          <i class="fas fa-euro-sign"></i> <%= @flat.price_per_night %>
+        </div>
+      </div>
+  </div>
+
+  <div class="share bg-light mt-2 p-3" style="box-shadow: 2px 2px 3px rgba(0,0,0,0.2)">
+    Share <i class="fab fa-facebook-square"></i>
+    <i class="fab fa-facebook-square"></i>
+    <i class="fab fa-facebook-square"></i>
+  </div>
+</div>
