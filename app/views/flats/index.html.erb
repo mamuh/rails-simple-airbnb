@@ -23,7 +23,7 @@
         <div class="links p-3" style="background-color: white;">
           <%= link_to "More info", flat_path(flat) %> |
           <%= link_to "Edit", edit_flat_path(flat) %> |
-          <%= link_to "Remove" %>
+          <%= link_to "Remove", flat_path(flat), method: :delete, data: { confirm: "Are you sure?" } %>
         </div>
       </div>
     <% end %>
